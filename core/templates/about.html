@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyBloom - About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #d0a4ce;
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header:before {
+            content: '';
+            background-image: url('https://via.placeholder.com/1200x600/ffffff/cccccc?text=BeautyBloom');
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .header p {
+            animation: fadeInUp 1.5s ease-in-out;
+            font-style: italic; /* Added font style for emphasis */
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mission-section {
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-section h2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(208, 164, 206, 0.4);
+            z-index: 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 50px 0;
+            margin-bottom: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #d0a4ce;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            margin-bottom: 30px; /* Added margin for spacing */
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            background-color: #d0a4ce;
+            border-radius: 50%;
+            left: -6px;
+            right: -6px;
+            z-index: 1;
+        }
+
+        .values-section {
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values-section h2 {
+            text-align: center;
+        }
+
+        .value-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background-color: #d0a4ce;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .cta-section {
+            background-color: #f2a6c1;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                width: 90%; /* Make timeline items full width on smaller screens */
+                left: 5%; /* Center the items */
+                text-align: left; /* Align text to the left */
+            }
+
+            .header h1 {
+                font-size: 2rem; /* Smaller font size for header */
+            }
+
+            .header p {
+                font-size: 1.2rem; /* Smaller font size for subtitle */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Welcome to BeautyBloom</h1>
+        <p>Your Journey to Radiance Begins Here</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="mission-section">
+            <h2 class="text-center">Our Mission</h2>
+            <p>At BeautyBloom, we are dedicated to providing top-notch beauty services and products that enhance your natural beauty and boost your confidence.</p>
+        </div>
+
+        <h2 class="text-center">Our Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>Our Vision Emerges</h4>
+                <p>BeautyBloom was founded with the belief that beauty should be accessible and empowering for everyone.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Launch of Signature Products</h4>
+                <p>We introduced our first line of beauty products, blending quality ingredients with luxurious experiences.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Expanding Our Services</h4>
+                <p>We began offering personalized skincare consultations and beauty workshops to educate and inspire our clients.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Opening Our Flagship Salon</h4>
+                <p>We opened a state-of-the-art salon, providing a comprehensive range of beauty services tailored to each individual.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Building a Community</h4>
+                <p>We launched our online community platform to connect beauty enthusiasts and professionals, fostering collaboration and support.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Commitment to Sustainability</h4>
+                <p>We embraced eco-friendly practices, ensuring that our products and services contribute to a healthier planet.</p>
+            </div>
+        </div>
+
+        <div class="values-section">
+            <h2>Our Values</h2>
+            <div class="value-item">
+                <h4>Integrity</h4>
+                <p>We believe in honesty and transparency in all our interactions.</p>
+            </div>
+            <div class="value-item">
+                <h4>Quality</h4>
+                <p>Our commitment to quality ensures that every product and service meets the highest standards.</p>
+            </div>
+            <div class="value-item">
+                <h4>Community</h4>
+                <p>We foster a supportive and inclusive environment for all our clients and team members.</p>
+            </div>
+            <div class="value-item">
+                <h4>Innovation</h4>
+                <p>We continuously seek new ways to enhance our services and stay at the forefront of beauty trends.</p>
+            </div>
+        </div>
+
+        <div class="cta-section mt-5">
+            <h2>Ready to Transform Your Beauty Routine?</h2>
+            <p>Contact us today to book your appointment and discover a new you!</p>
+            <a href="/book-appointment/" class="btn btn-light btn-lg">Book Appointment</a>
+        </div>
+    </div>
+
+    <footer class="footer text-center mt-5">
+        <p>&copy; 2024 BeautyBloom. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

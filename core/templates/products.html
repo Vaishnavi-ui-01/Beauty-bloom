@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyBloom - Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #f2a6c1;
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .product-card {
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            color: #f2a6c1;
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Our Products</h1>
+        <p>Explore a curated selection of beauty products just for you</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Moisturizer -->
+            <div class="col-md-4">
+                <div class="card product-card mb-4">
+                    <img src="{% static 'images/moisturizer.jpg' %}" class="card-img-top" alt="Moisturizer">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Moisturizer</h5>
+                        <p class="card-text">Hydrate and nourish your skin with our premium moisturizer.</p>
+                        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#moisturizerModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Moisturizer -->
+            <div class="modal fade" id="moisturizerModal" tabindex="-1" aria-labelledby="moisturizerModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="moisturizerModalLabel">Moisturizer Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>How to Use:</strong> Apply to cleansed face, morning and night.</p>
+                            <p><strong>Advantages:</strong> Hydrates skin, non-greasy, suitable for all skin types.</p>
+                            <p><strong>Disadvantages:</strong> May not be suitable for oily skin in humid climates.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lip Balm -->
+            <div class="col-md-4">
+                <div class="card product-card mb-4">
+                    <img src="{% static 'images/lip balm.jpg' %}" class="card-img-top" alt="Lip Balm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lip Balm</h5>
+                        <p class="card-text">Keep your lips soft and smooth with our all-natural lip balm.</p>
+                        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#lipBalmModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Lip Balm -->
+            <div class="modal fade" id="lipBalmModal" tabindex="-1" aria-labelledby="lipBalmModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="lipBalmModalLabel">Lip Balm Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>How to Use:</strong> Apply a small amount to lips as needed.</p>
+                            <p><strong>Advantages:</strong> Natural ingredients, deeply moisturizing.</p>
+                            <p><strong>Disadvantages:</strong> May require frequent reapplication.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Face Mask -->
+            <div class="col-md-4">
+                <div class="card product-card mb-4">
+                    <img src="{% static 'images/face mask.jpg' %}" class="card-img-top" alt="Face Mask">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Face Mask</h5>
+                        <p class="card-text">Rejuvenate your skin with our luxurious face mask.</p>
+                        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#faceMaskModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Face Mask -->
+            <div class="modal fade" id="faceMaskModal" tabindex="-1" aria-labelledby="faceMaskModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="faceMaskModalLabel">Face Mask Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>How to Use:</strong> Apply an even layer, leave on for 15 minutes, then rinse.</p>
+                            <p><strong>Advantages:</strong> Deep cleansing, revitalizing for tired skin.</p>
+                            <p><strong>Disadvantages:</strong> Not ideal for very dry skin.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row">
+            <!-- Hair Serum -->
+            <div class="col-md-4">
+                <div class="card product-card mb-4">
+                    <img src="{% static 'images/hair serum.jpg' %}" class="card-img-top" alt="Hair Serum">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hair Serum</h5>
+                        <p class="card-text">Nourish and shine with our premium hair serum.</p>
+                        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairSerumModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Hair Serum -->
+            <div class="modal fade" id="hairSerumModal" tabindex="-1" aria-labelledby="hairSerumModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hairSerumModalLabel">Hair Serum Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>How to Use:</strong> Apply to damp hair and style as usual.</p>
+                            <p><strong>Advantages:</strong> Adds shine, reduces frizz.</p>
+                            <p><strong>Disadvantages:</strong> May weigh down fine hair.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sunscreen -->
+            <div class="col-md-4">
+                <div class="card product-card mb-4">
+                    <img src="{% static 'images/sunscreen.jpg' %}" class="card-img-top" alt="Sunscreen">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sunscreen</h5>
+                        <p class="card-text">Protect your skin from harmful UV rays with our effective sunscreen.</p>
+                        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#sunscreenModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Sunscreen -->
+            <div class="modal fade" id="sunscreenModal" tabindex="-1" aria-labelledby="sunscreenModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="sunscreenModalLabel">Sunscreen Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>How to Use:</strong> Apply 15 minutes before sun exposure, reapply every 2 hours.</p>
+                            <p><strong>Advantages:</strong> Broad-spectrum protection, water-resistant.</p>
+                            <p><strong>Disadvantages:</strong> Can leave a white cast on darker skin tones.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perfume -->
+            <div class="col-md-4">
+                <div class="card product-card mb-4">
+                    <img src="{% static 'images/perfume.jpg' %}" class="card-img-top" alt="Perfume">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Perfume</h5>
+                        <p class="card-text">Captivate your senses with our signature fragrance.</p>
+                        <a href="#" class="btn btn-outline-primary" data-toggle="modal" data-target="#perfumeModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Perfume -->
+            <div class="modal fade" id="perfumeModal" tabindex="-1" aria-labelledby="perfumeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="perfumeModalLabel">Perfume Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>How to Use:</strong> Spray lightly on pulse points for long-lasting fragrance.</p>
+                            <p><strong>Advantages:</strong> Long-lasting, subtle but captivating scent.</p>
+                            <p><strong>Disadvantages:</strong> May not suit all scent preferences.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 mb-3">
+        <p>&copy; 2024 BeautyBloom. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

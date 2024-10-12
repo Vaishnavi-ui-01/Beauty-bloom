@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Treatment Services - BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #9dc8d8;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .service-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .service-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Body Treatment Services</h1>
+        <p>Pamper yourself with our rejuvenating body treatments!</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Body Treatment 1 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/body1.jpg' %}" class="card-img-top" alt="Body Scrub">
+                    <div class="card-body">
+                        <h5 class="card-title">Body Scrub</h5>
+                        <p class="card-text">Exfoliate your skin with our luxurious body scrub treatments.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#body1Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body Treatment 2 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/body2.jpg' %}" class="card-img-top" alt="Detox Body Wrap">
+                    <div class="card-body">
+                        <h5 class="card-title">Detox Body Wrap</h5>
+                        <p class="card-text">Purify and rejuvenate your skin with our detox body wrap.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#body2Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body Treatment 3 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/body3.jpg' %}" class="card-img-top" alt="Aromatherapy Massage">
+                    <div class="card-body">
+                        <h5 class="card-title">Aromatherapy Massage</h5>
+                        <p class="card-text">Relax and unwind with our soothing aromatherapy massage.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#body3Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Body Treatment 4 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/body4.jpg' %}" class="card-img-top" alt="Hydrating Body Wrap">
+                    <div class="card-body">
+                        <h5 class="card-title">Hydrating Body Wrap</h5>
+                        <p class="card-text">Moisturize and nourish your skin with our hydrating body wrap.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#body4Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body Treatment 5 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/body5.jpg' %}" class="card-img-top" alt="Hot Stone Massage">
+                    <div class="card-body">
+                        <h5 class="card-title">Hot Stone Massage</h5>
+                        <p class="card-text">Soothe muscle tension and stress with our hot stone massage therapy.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#body5Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body Treatment 6 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/body6.jpg' %}" class="card-img-top" alt="Anti-Cellulite Treatment">
+                    <div class="card-body">
+                        <h5 class="card-title">Anti-Cellulite Treatment</h5>
+                        <p class="card-text">Tone and firm your skin with our anti-cellulite body treatment.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#body6Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for each body treatment service -->
+
+    <!-- Body 1 Modal -->
+    <div class="modal fade" id="body1Modal" tabindex="-1" aria-labelledby="body1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="body1ModalLabel">Body Scrub</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our body scrub service will exfoliate your skin, leaving it smooth and radiant.</p>
+                    <p><strong>Price:</strong> $90</p>
+                    <p><strong>Benefits:</strong> Removes dead skin cells, hydrates, and promotes a youthful glow.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body 2 Modal -->
+    <div class="modal fade" id="body2Modal" tabindex="-1" aria-labelledby="body2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="body2ModalLabel">Detox Body Wrap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Purify and rejuvenate your skin with our detoxifying body wrap treatment.</p>
+                    <p><strong>Price:</strong> $110</p>
+                    <p><strong>Benefits:</strong> Removes toxins, improves skin texture, and promotes relaxation.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body 3 Modal -->
+    <div class="modal fade" id="body3Modal" tabindex="-1" aria-labelledby="body3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="body3ModalLabel">Aromatherapy Massage</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Relax and unwind with our soothing aromatherapy massage using essential oils.</p>
+                    <p><strong>Price:</strong> $100</p>
+                    <p><strong>Benefits:</strong> Relieves stress, promotes relaxation, and improves mental clarity.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body 4 Modal -->
+    <div class="modal fade" id="body4Modal" tabindex="-1" aria-labelledby="body4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="body4ModalLabel">Hydrating Body Wrap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our hydrating body wrap replenishes moisture, leaving your skin soft and glowing.</p>
+                    <p><strong>Price:</strong> $120</p>
+                    <p><strong>Benefits:</strong> Deeply hydrates, improves skin texture, and soothes dry skin.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body 5 Modal -->
+    <div class="modal fade" id="body5Modal" tabindex="-1" aria-labelledby="body5ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="body5ModalLabel">Hot Stone Massage</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Soothe your muscles and melt away stress with our hot stone massage therapy.</p>
+                    <p><strong>Price:</strong> $130</p>
+                    <p><strong>Benefits:</strong> Reduces muscle tension, relieves pain, and improves circulation.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body 6 Modal -->
+    <div class="modal fade" id="body6Modal" tabindex="-1" aria-labelledby="body6ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="body6ModalLabel">Anti-Cellulite Treatment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Tone and firm your skin with our anti-cellulite treatment designed to reduce the appearance of cellulite.</p>
+                    <p><strong>Price:</strong> $140</p>
+                    <p><strong>Benefits:</strong> Improves skin tone, reduces cellulite, and promotes smoother skin.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Services - BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #d88dc8;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .service-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .service-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Makeup Services</h1>
+        <p>Look your best for any occasion with our professional makeup services!</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Makeup 1 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/makeup1.jpg' %}" class="card-img-top" alt="Bridal Makeup">
+                    <div class="card-body">
+                        <h5 class="card-title">Bridal Makeup</h5>
+                        <p class="card-text">Get the perfect look for your big day with our expert bridal makeup services.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#makeup1Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Makeup 2 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/makeup2.jpg' %}" class="card-img-top" alt="Party Makeup">
+                    <div class="card-body">
+                        <h5 class="card-title">Party Makeup</h5>
+                        <p class="card-text">Shine at any event with our glamorous party makeup looks.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#makeup2Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Makeup 3 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/makeup3.jpg' %}" class="card-img-top" alt="Natural Makeup">
+                    <div class="card-body">
+                        <h5 class="card-title">Natural Makeup</h5>
+                        <p class="card-text">Achieve a fresh, natural look with our subtle makeup application.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#makeup3Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Makeup 4 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/makeup4.jpg' %}" class="card-img-top" alt="Editorial Makeup">
+                    <div class="card-body">
+                        <h5 class="card-title">Editorial Makeup</h5>
+                        <p class="card-text">Stand out with our creative and bold editorial makeup looks.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#makeup4Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Makeup 5 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/makeup5.jpg' %}" class="card-img-top" alt="Prom Makeup">
+                    <div class="card-body">
+                        <h5 class="card-title">Prom Makeup</h5>
+                        <p class="card-text">Look fabulous for your prom night with our expert prom makeup.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#makeup5Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Makeup 6 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/makeup6.jpg' %}" class="card-img-top" alt="Evening Glam Makeup">
+                    <div class="card-body">
+                        <h5 class="card-title">Evening Glam Makeup</h5>
+                        <p class="card-text">Glam it up with our evening makeup look, perfect for any special occasion.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#makeup6Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for each makeup service -->
+
+    <!-- Makeup 1 Modal -->
+    <div class="modal fade" id="makeup1Modal" tabindex="-1" aria-labelledby="makeup1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeup1ModalLabel">Bridal Makeup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Bridal Makeup service ensures you look radiant on your special day, with makeup customized to suit your style and theme.</p>
+                    <p><strong>Price:</strong> $150</p>
+                    <p><strong>Benefits:</strong> Long-lasting, professional look, tailored to your preferences.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Makeup 2 Modal -->
+    <div class="modal fade" id="makeup2Modal" tabindex="-1" aria-labelledby="makeup2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeup2ModalLabel">Party Makeup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Shine at any event with our glamorous party makeup. Perfect for weddings, birthdays, or any special occasion!</p>
+                    <p><strong>Price:</strong> $120</p>
+                    <p><strong>Benefits:</strong> Long-lasting, photo-ready makeup for any event.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Makeup 3 Modal -->
+    <div class="modal fade" id="makeup3Modal" tabindex="-1" aria-labelledby="makeup3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeup3ModalLabel">Natural Makeup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Achieve a fresh and natural glow with our natural makeup look, ideal for daily wear or minimalist beauty.</p>
+                    <p><strong>Price:</strong> $80</p>
+                    <p><strong>Benefits:</strong> Light coverage, breathable formula, and a subtle finish.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Makeup 4 Modal -->
+    <div class="modal fade" id="makeup4Modal" tabindex="-1" aria-labelledby="makeup4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeup4ModalLabel">Editorial Makeup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Be bold and make a statement with our creative editorial makeup styles.</p>
+                    <p><strong>Price:</strong> $200</p>
+                    <p><strong>Benefits:</strong> Unique and artistic looks, ideal for photoshoots or fashion shows.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Makeup 5 Modal -->
+    <div class="modal fade" id="makeup5Modal" tabindex="-1" aria-labelledby="makeup5ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeup5ModalLabel">Prom Makeup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Make a lasting impression on your prom night with our expert prom makeup service.</p>
+                    <p><strong>Price:</strong> $100</p>
+                    <p><strong>Benefits:</strong> Flawless, long-lasting finish for your special evening.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Makeup 6 Modal -->
+    <div class="modal fade" id="makeup6Modal" tabindex="-1" aria-labelledby="makeup6ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="makeup6ModalLabel">Evening Glam Makeup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Glam up your evening look with our bold and glamorous evening makeup application.</p>
+                    <p><strong>Price:</strong> $130</p>
+                    <p><strong>Benefits:</strong> Dramatic and luxurious look for evening occasions.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

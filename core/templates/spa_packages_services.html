@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa Packages - BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #d88dc8;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .service-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .service-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Spa Packages</h1>
+        <p>Indulge in our luxurious spa packages for relaxation and rejuvenation!</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Package 1 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/spa1.jpg' %}" class="card-img-top" alt="Relaxation Package">
+                    <div class="card-body">
+                        <h5 class="card-title">Relaxation Package</h5>
+                        <p class="card-text">A soothing experience combining massage and aromatherapy.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#spa1Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/spa2.jpg' %}" class="card-img-top" alt="Detox Package">
+                    <div class="card-body">
+                        <h5 class="card-title">Detox Package</h5>
+                        <p class="card-text">Cleanse and rejuvenate your body with our detoxifying treatments.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#spa2Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/spa3.jpg' %}" class="card-img-top" alt="Signature Spa Day">
+                    <div class="card-body">
+                        <h5 class="card-title">Signature Spa Day</h5>
+                        <p class="card-text">Enjoy a full day of pampering with our signature treatments.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#spa3Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Package 4 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/spa4.jpg' %}" class="card-img-top" alt="Couples Retreat">
+                    <div class="card-body">
+                        <h5 class="card-title">Couples Retreat</h5>
+                        <p class="card-text">Share a day of relaxation and pampering with your partner.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#spa4Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 5 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/spa5.jpg' %}" class="card-img-top" alt="Rejuvenation Package">
+                    <div class="card-body">
+                        <h5 class="card-title">Rejuvenation Package</h5>
+                        <p class="card-text">A revitalizing experience that restores balance and energy.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#spa5Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 6 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/spa6.jpg' %}" class="card-img-top" alt="Ultimate Spa Experience">
+                    <div class="card-body">
+                        <h5 class="card-title">Ultimate Spa Experience</h5>
+                        <p class="card-text">Indulge in our comprehensive package for the ultimate relaxation.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#spa6Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Spa Package 1 Modal -->
+    <div class="modal fade" id="spa1Modal" tabindex="-1" aria-labelledby="spa1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spa1ModalLabel">Relaxation Package</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Relaxation Package combines soothing massages and aromatherapy for a calming experience.</p>
+                    <p><strong>Price:</strong> $120</p>
+                    <p><strong>Benefits:</strong> Stress relief, relaxation, and improved mood.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spa Package 2 Modal -->
+    <div class="modal fade" id="spa2Modal" tabindex="-1" aria-labelledby="spa2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spa2ModalLabel">Detox Package</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Detox Package is designed to cleanse and rejuvenate your body with specialized treatments.</p>
+                    <p><strong>Price:</strong> $140</p>
+                    <p><strong>Benefits:</strong> Cleansed body, renewed energy, and improved well-being.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spa Package 3 Modal -->
+    <div class="modal fade" id="spa3Modal" tabindex="-1" aria-labelledby="spa3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spa3ModalLabel">Signature Spa Day</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Enjoy a full day of pampering with our Signature Spa Day package, featuring various treatments.</p>
+                    <p><strong>Price:</strong> $200</p>
+                    <p><strong>Benefits:</strong> Total relaxation, rejuvenation, and stress relief.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spa Package 4 Modal -->
+    <div class="modal fade" id="spa4Modal" tabindex="-1" aria-labelledby="spa4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spa4ModalLabel">Couples Retreat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Share a day of relaxation and pampering with your partner, featuring couple massages and spa treatments.</p>
+                    <p><strong>Price:</strong> $250</p>
+                    <p><strong>Benefits:</strong> Strengthened bond, relaxation, and shared experience.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spa Package 5 Modal -->
+    <div class="modal fade" id="spa5Modal" tabindex="-1" aria-labelledby="spa5ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spa5ModalLabel">Rejuvenation Package</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>A revitalizing experience that restores balance and energy through specialized treatments.</p>
+                    <p><strong>Price:</strong> $180</p>
+                    <p><strong>Benefits:</strong> Increased energy, improved mood, and enhanced well-being.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spa Package 6 Modal -->
+    <div class="modal fade" id="spa6Modal" tabindex="-1" aria-labelledby="spa6ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spa6ModalLabel">Ultimate Spa Experience</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Indulge in our comprehensive package for the ultimate relaxation experience.</p>
+                    <p><strong>Price:</strong> $300</p>
+                    <p><strong>Benefits:</strong> Complete relaxation, full body rejuvenation, and enhanced well-being.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairstyling Services - BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #d88dc8;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .service-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .service-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Hairstyling Services</h1>
+        <p>Transform your look with our professional hairstyling services!</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Hairstyling 1 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/hairstyle1.jpg' %}" class="card-img-top" alt="Haircut and Styling">
+                    <div class="card-body">
+                        <h5 class="card-title">Haircut and Styling</h5>
+                        <p class="card-text">Get a professional haircut and styling for a fresh and polished look.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairstyle1Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hairstyling 2 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/hairstyle2.jpg' %}" class="card-img-top" alt="Blowout">
+                    <div class="card-body">
+                        <h5 class="card-title">Blowout</h5>
+                        <p class="card-text">A voluminous blowout for sleek and smooth hair with a perfect finish.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairstyle2Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hairstyling 3 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/hairstyle3.jpg' %}" class="card-img-top" alt="Updo">
+                    <div class="card-body">
+                        <h5 class="card-title">Updo</h5>
+                        <p class="card-text">Get a gorgeous updo for weddings, parties, and other special occasions.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairstyle3Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Hairstyling 4 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/hairstyle4.jpg' %}" class="card-img-top" alt="Hair Coloring">
+                    <div class="card-body">
+                        <h5 class="card-title">Hair Coloring</h5>
+                        <p class="card-text">Vibrant and personalized hair coloring for a bold new look.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairstyle4Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hairstyling 5 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/hairstyle5.jpg' %}" class="card-img-top" alt="Keratin Treatment">
+                    <div class="card-body">
+                        <h5 class="card-title">Keratin Treatment</h5>
+                        <p class="card-text">Smooth and frizz-free hair with a luxurious keratin treatment.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairstyle5Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hairstyling 6 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/hairstyle6.jpg' %}" class="card-img-top" alt="Extensions">
+                    <div class="card-body">
+                        <h5 class="card-title">Extensions</h5>
+                        <p class="card-text">Add instant length and volume with high-quality hair extensions.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hairstyle6Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Hairstyling 1 Modal (Haircut and Styling) -->
+    <div class="modal fade" id="hairstyle1Modal" tabindex="-1" aria-labelledby="hairstyle1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hairstyle1ModalLabel">Haircut and Styling</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Get a professional haircut and styling for a fresh and polished look that suits your personality and style.</p>
+                    <p><strong>Price:</strong> $40</p>
+                    <p><strong>Benefits:</strong> Clean and fresh look, personal style enhancement.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hairstyling 2 Modal (Blowout) -->
+    <div class="modal fade" id="hairstyle2Modal" tabindex="-1" aria-labelledby="hairstyle2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hairstyle2ModalLabel">Blowout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>A voluminous blowout for sleek, smooth, and beautiful hair that’s perfect for any occasion.</p>
+                    <p><strong>Price:</strong> $30</p>
+                    <p><strong>Benefits:</strong> Smooth hair, volume boost, and a polished look.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hairstyling 3 Modal (Updo) -->
+    <div class="modal fade" id="hairstyle3Modal" tabindex="-1" aria-labelledby="hairstyle3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hairstyle3ModalLabel">Updo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Get a gorgeous updo for weddings, parties, and other special occasions. Tailored to your preferences!</p>
+                    <p><strong>Price:</strong> $60</p>
+                    <p><strong>Benefits:</strong> Elegant look, customizable styles, and long-lasting hold.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hairstyling 4 Modal (Hair Coloring) -->
+    <div class="modal fade" id="hairstyle4Modal" tabindex="-1" aria-labelledby="hairstyle4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hairstyle4ModalLabel">Hair Coloring</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Hair Coloring service provides expert color application for a vibrant and long-lasting look. Choose from a variety of colors or go bold with custom shades.</p>
+                    <p><strong>Price:</strong> $70</p>
+                    <p><strong>Benefits:</strong> Long-lasting color, personalized shade, and expert application.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hairstyling 5 Modal (Keratin Treatment) -->
+    <div class="modal fade" id="hairstyle5Modal" tabindex="-1" aria-labelledby="hairstyle5ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hairstyle5ModalLabel">Keratin Treatment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Keratin Treatment will smooth and strengthen your hair, reducing frizz and giving your hair a silky finish that lasts for weeks.</p>
+                    <p><strong>Price:</strong> $100</p>
+                    <p><strong>Benefits:</strong> Frizz-free hair, smoother texture, and long-lasting shine.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hairstyling 6 Modal (Extensions) -->
+    <div class="modal fade" id="hairstyle6Modal" tabindex="-1" aria-labelledby="hairstyle6ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hairstyle6ModalLabel">Extensions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Extensions service adds instant length and volume to your hair with high-quality extensions, professionally applied for a seamless and natural look.</p>
+                    <p><strong>Price:</strong> $150</p>
+                    <p><strong>Benefits:</strong> Increased volume, longer hair, and natural-looking finish.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

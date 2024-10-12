@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Services - BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #d88dc8;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .service-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .service-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Facial Treatment Services</h1>
+        <p>Relax and rejuvenate with our specialized facial treatments!</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Facial 1 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/facial1.jpg' %}" class="card-img-top" alt="Classic Facial">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Facial</h5>
+                        <p class="card-text">A gentle and refreshing facial perfect for all skin types.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#facial1Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facial 2 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/facial2.jpg' %}" class="card-img-top" alt="Anti-Aging Facial">
+                    <div class="card-body">
+                        <h5 class="card-title">Anti-Aging Facial</h5>
+                        <p class="card-text">Reduce fine lines and wrinkles with our specialized anti-aging treatment.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#facial2Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facial 3 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/facial3.jpg' %}" class="card-img-top" alt="Deep Cleansing Facial">
+                    <div class="card-body">
+                        <h5 class="card-title">Deep Cleansing Facial</h5>
+                        <p class="card-text">A thorough cleansing for acne-prone and oily skin.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#facial3Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Facial 4 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/facial4.jpg' %}" class="card-img-top" alt="Brightening Facial">
+                    <div class="card-body">
+                        <h5 class="card-title">Brightening Facial</h5>
+                        <p class="card-text">Brighten your complexion with our powerful brightening facial.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#facial4Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facial 5 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/facial5.jpg' %}" class="card-img-top" alt="Hydrating Facial">
+                    <div class="card-body">
+                        <h5 class="card-title">Hydrating Facial</h5>
+                        <p class="card-text">Revitalize your skin with our intense hydration treatment.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#facial5Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facial 6 -->
+            <div class="col-md-4">
+                <div class="card service-card mb-4">
+                    <img src="{% static 'images/facial6.jpg' %}" class="card-img-top" alt="Oxygen Facial">
+                    <div class="card-body">
+                        <h5 class="card-title">Oxygen Facial</h5>
+                        <p class="card-text">Experience the benefits of oxygen therapy for radiant skin.</p>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#facial6Modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Facial 1 Modal -->
+    <div class="modal fade" id="facial1Modal" tabindex="-1" aria-labelledby="facial1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="facial1ModalLabel">Classic Facial</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Classic Facial is designed to rejuvenate and refresh your skin. Perfect for all skin types, this treatment includes cleansing, exfoliation, and hydration.</p>
+                    <p><strong>Price:</strong> $50</p>
+                    <p><strong>Benefits:</strong> Relaxation, improved skin texture, and hydration.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facial 2 Modal -->
+    <div class="modal fade" id="facial2Modal" tabindex="-1" aria-labelledby="facial2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="facial2ModalLabel">Anti-Aging Facial</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Anti-Aging Facial is formulated to reduce fine lines and wrinkles. Includes targeted serums and a relaxing massage.</p>
+                    <p><strong>Price:</strong> $65</p>
+                    <p><strong>Benefits:</strong> Reduced wrinkles, improved elasticity, youthful glow.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facial 3 Modal -->
+    <div class="modal fade" id="facial3Modal" tabindex="-1" aria-labelledby="facial3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="facial3ModalLabel">Deep Cleansing Facial</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Our Deep Cleansing Facial is perfect for acne-prone or oily skin. This treatment includes deep exfoliation, extraction, and a purifying mask.</p>
+                    <p><strong>Price:</strong> $55</p>
+                    <p><strong>Benefits:</strong> Clearer complexion, reduced acne, oil control.</p>
+                    <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional facial modals here for facial 4, 5, 6 -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

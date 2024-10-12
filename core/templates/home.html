@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .hero {
+            background-image: url('images/background.jpg'); /* Your background image */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background-color: rgba(255, 105, 180, 0.7); /* Semi-transparent pink background */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .hero h1,
+        .hero p {
+            opacity: 0; /* Start invisible */
+            transform: translateY(20px); /* Start lower */
+            animation: fadeInUp 1s forwards; /* Apply animation */
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1; /* Fade in */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff69b4; /* Bright pink */
+            animation-delay: 0.5s; /* Delay for h1 */
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            color: #e6e6fa; /* Lavender */
+            animation-delay: 0.8s; /* Delay for p */
+        }
+
+        .testimonials,
+        .newsletter {
+            padding: 50px 0;
+        }
+
+        .testimonials {
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #e69baf;
+        }
+
+        .btn-cta {
+            background-color: #e69baf;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: #d88399;
+            color: white;
+        }
+
+        /* Map Section Styles */
+        .map-container {
+            padding: 50px 0;
+            background-color: #f0f0f0;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products/">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login/">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Unveil Your Natural Glow</h1>
+            <p>Luxurious Skincare & Beauty Services to Elevate Your Confidence</p>
+            <a href="/services/" class="btn btn-cta">Explore Our Services</a>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-container text-center">
+        <h2>Find Beauty Salons Near You</h2>
+        <div id="map"></div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials text-center">
+        <div class="container">
+            <h2>What Our Clients Are Saying</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"The best facial I've ever had! My skin feels amazing!"</p>
+                        <footer class="blockquote-footer">Sarah M.</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-6">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"I loved my makeover. The team was so professional!"</p>
+                        <footer class="blockquote-footer">Jessica L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter text-center">
+        <div class="container">
+            <h2>Stay in Touch</h2>
+            <form class="form-inline justify-content-center">
+                <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter your email">
+                <button type="submit" class="btn btn-cta mb-2">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 BeautyBloom. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Maps API -->
+    <script>
+        function initMap() {
+            const location = { lat: 37.7749, lng: -122.4194 };  // Example location (San Francisco)
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: location,
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

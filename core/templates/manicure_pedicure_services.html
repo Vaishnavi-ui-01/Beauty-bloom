@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manicure and Pedicure Services - BeautyBloom</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Additional Styles for the Page */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            margin-bottom: 40px;
+        }
+
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-body {
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background-color: #FF69B4;
+            border-color: #FF69B4;
+        }
+
+        .btn-primary:hover {
+            background-color: #FF1493;
+            border-color: #FF1493;
+        }
+
+        h1, h2 {
+            color: #343a40;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">BeautyBloom</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/book-appointment/">Book Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Manicure and Pedicure Services</h1>
+
+        <h2 class="mt-5">Manicure Services</h2>
+        <div class="row">
+            <!-- Manicure 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'images/manicure1.jpg' %}" class="card-img-top" alt="Classic Manicure">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Manicure</h5>
+                        <p class="card-text">A traditional manicure that leaves your nails looking flawless.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#manicure1Modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manicure 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'images/manicure2.jpg' %}" class="card-img-top" alt="Gel Manicure">
+                    <div class="card-body">
+                        <h5 class="card-title">Gel Manicure</h5>
+                        <p class="card-text">Long-lasting gel polish for a glossy finish.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#manicure2Modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manicure 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'images/manicure3.jpg' %}" class="card-img-top" alt="Spa Manicure">
+                    <div class="card-body">
+                        <h5 class="card-title">Spa Manicure</h5>
+                        <p class="card-text">Indulge in a relaxing spa treatment for your hands.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#manicure3Modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-5">Pedicure Services</h2>
+        <div class="row">
+            <!-- Pedicure 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'images/pedicure1.jpg' %}" class="card-img-top" alt="Classic Pedicure">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Pedicure</h5>
+                        <p class="card-text">A soothing pedicure to keep your feet looking great.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#pedicure1Modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedicure 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'images/pedicure2.jpg' %}" class="card-img-top" alt="Spa Pedicure">
+                    <div class="card-body">
+                        <h5 class="card-title">Spa Pedicure</h5>
+                        <p class="card-text">Pamper your feet with our relaxing spa treatment.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#pedicure2Modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedicure 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{% static 'images/pedicure3.jpg' %}" class="card-img-top" alt="Gel Pedicure">
+                    <div class="card-body">
+                        <h5 class="card-title">Gel Pedicure</h5>
+                        <p class="card-text">Long-lasting gel polish for a vibrant look.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#pedicure3Modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manicure Modals -->
+        <div class="modal fade" id="manicure1Modal" tabindex="-1" role="dialog" aria-labelledby="manicure1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="manicure1ModalLabel">Classic Manicure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Our Classic Manicure includes nail shaping, cuticle care, and a beautiful polish finish. Enjoy a relaxing experience as we pamper your hands!</p>
+                        <p><strong>Price:</strong> $25</p>
+                        <p><strong>Benefits:</strong> Improves nail health, enhances appearance, and provides relaxation.</p>
+                        <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="manicure2Modal" tabindex="-1" role="dialog" aria-labelledby="manicure2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="manicure2ModalLabel">Gel Manicure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Gel Manicure offers a long-lasting, high-gloss finish that resists chipping. Enjoy a flawless look for weeks!</p>
+                        <p><strong>Price:</strong> $35</p>
+                        <p><strong>Benefits:</strong> Durable, quick-drying, and chip-resistant for a long-lasting shine.</p>
+                        <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="manicure3Modal" tabindex="-1" role="dialog" aria-labelledby="manicure3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="manicure3ModalLabel">Spa Manicure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Indulge in our Spa Manicure for a luxurious treatment that includes exfoliation, moisturizing, and a relaxing massage.</p>
+                        <p><strong>Price:</strong> $45</p>
+                        <p><strong>Benefits:</strong> Deep hydration, improved nail health, and stress relief.</p>
+                        <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pedicure Modals -->
+        <div class="modal fade" id="pedicure1Modal" tabindex="-1" role="dialog" aria-labelledby="pedicure1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pedicure1ModalLabel">Classic Pedicure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enjoy our Classic Pedicure which includes nail trimming, foot scrubbing, and a perfect polish finish.</p>
+                        <p><strong>Price:</strong> $30</p>
+                        <p><strong>Benefits:</strong> Relaxation, improved foot hygiene, and revitalized appearance.</p>
+                        <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pedicure2Modal" tabindex="-1" role="dialog" aria-labelledby="pedicure2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pedicure2ModalLabel">Spa Pedicure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Spa Pedicure offers a delightful experience that includes foot soaking, scrubbing, and a hydrating mask.</p>
+                        <p><strong>Price:</strong> $50</p>
+                        <p><strong>Benefits:</strong> Deep relaxation, revitalization of feet, and improved skin condition.</p>
+                        <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pedicure3Modal" tabindex="-1" role="dialog" aria-labelledby="pedicure3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pedicure3ModalLabel">Gel Pedicure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Our Gel Pedicure ensures a long-lasting shine that will keep your toes looking vibrant and fresh.</p>
+                        <p><strong>Price:</strong> $40</p>
+                        <p><strong>Benefits:</strong> Long-lasting shine, chip resistance, and vibrant colors.</p>
+                        <a href="/book-appointment/" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>© 2024 BeautyBloom. All rights reserved.</p>
+    </footer>
+
+    <!-- Load the full version of jQuery instead of the slim version -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
